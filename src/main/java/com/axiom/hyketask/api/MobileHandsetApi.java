@@ -7,11 +7,11 @@ import org.springframework.web.bind.annotation.GetMapping;
 
 import java.util.List;
 
-@FeignClient("mobile-handset")
+@FeignClient("mobile")
 public interface MobileHandsetApi {
 
     @GetMapping(
-            value = "/mobile-handset/search",
+            value = "/mobile/search",
             produces = MediaType.APPLICATION_JSON_VALUE
     )
     List<MobileHandsetDTO> mobileHandsets();
