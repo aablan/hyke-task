@@ -9,7 +9,12 @@ import lombok.NoArgsConstructor;
 @Builder
 @NoArgsConstructor
 @AllArgsConstructor
-public class ReleaseDTO {
-    private String announceDate;
+public class MobileFilterParamsDTO {
     private Integer priceEur;
+    private String brand;
+    private String phone;
+    private String sim;
+    private String announceDate;
+    private String audioJack;
+    private String gps;
 }
