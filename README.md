@@ -1,4 +1,4 @@
-#About The project:
+# About The project:
 In this project, an endpoint is consumed that provides access to json data which is mobile dataset information.
 A service is implemented that consumes the provided endpoint using rest template, map the fetched data to into a list of DTO objects that are stores
 in memory, and then provides a basic filtration based on some criteria, and the result of that is exposed to the client via a rest endpoint
