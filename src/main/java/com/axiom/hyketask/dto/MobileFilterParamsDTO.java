@@ -10,7 +10,7 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 @AllArgsConstructor
 public class MobileFilterParamsDTO {
-    private Integer priceEur;
+    private Integer price;
     private String brand;
     private String phone;
     private String sim;

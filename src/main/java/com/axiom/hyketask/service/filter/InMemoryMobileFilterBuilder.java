@@ -18,7 +18,6 @@ public class InMemoryMobileFilterBuilder{
         return filters.stream()
                 .filter(item -> item.shouldCompute(filter))
                 .map(item -> item.filter(filter))
-                .reduce(Predicate::and)
-                .orElse(item -> true);
+                .reduce(item -> true, Predicate::and);
     }
 }
