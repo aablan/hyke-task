@@ -9,6 +9,10 @@ import org.springframework.web.bind.annotation.GetMapping;
 
 import java.util.List;
 
+/**
+ * This Api client provides definitions of operations on MobileHandset resource
+ *
+ */
 @FeignClient("mobile")
 public interface MobileHandsetApi {
 
