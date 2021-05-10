@@ -6,7 +6,8 @@ in memory, and then provides a basic filtration based on some criteria, and the 
 # Project Components & Design:
 - Api definition for the endpoint "/mobile/search", that determines what is the request form and what is provided as a response (DTO data).
 - Rest controller that provide implementation of the Api definition.
-- Service layer which basically consume data from the endpoint ("https://run.mocky.io/v3/b755c334-9627-4b09-84f2-548cb1918184"), store the result in memory, and perform filtration which is passed from client.
+- Service layer which passes call to fetch filtered data to repository layer.
+- Repository layer which provides data operations for mobile data, Mongo implementation is provided.
 - Filters are implemented in accordance to the open-closed principle which will enable users of this design to simply add new types of filters by extending a specific behavior not by changing the existing behavior.
 
 # Technical Details:
@@ -15,6 +16,8 @@ in memory, and then provides a basic filtration based on some criteria, and the 
 - Spring boot version 2.3.
 - Integration tests using junit5 & rest assured.
 - Feign Clients to provide the definition.
+- Mongo DB to store the provided mobile data, and perform operations.
+- Proper docker installtion is needed on the machine running the test cases.
 
 # How to Run:
 - Pre-requisites:<br />
@@ -30,6 +33,7 @@ in memory, and then provides a basic filtration based on some criteria, and the 
 
 # Miscellaneous:
 - Integration test cases are provided for the major functionalities.
+- Integration test launches an embedded mongo docker contatiner and initialize it with data to run the tests.
 - No Unit tests as the provided integration test covers end to end which should be good enough for the scope of the assignment.
 - Only basic important filters are implemented, it should be enough to show the concepts, and new ones can easily be added on need.
 - Documentation is provided for the high level components, for the rest, the code should be pretty much self-explanatory.
