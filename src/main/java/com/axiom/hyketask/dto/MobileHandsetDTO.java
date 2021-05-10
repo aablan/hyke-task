@@ -10,7 +10,7 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 @AllArgsConstructor
 public class MobileHandsetDTO {
-    private long id;
+    private long itemNum;
     private String brand;
     private String phone;
     private String picture;

@@ -1,3 +1,6 @@
-hyke:
-  mobiledata-endpoint:
-    url: https://run.mocky.io/v3/b755c334-9627-4b09-84f2-548cb1918184
+spring:
+  application:
+    name: hyke-task
+  data:
+    mongodb:
+      uri: ${MONGO_URI:mongodb://localhost:27017/mobile_service_db}

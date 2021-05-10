@@ -1,4 +1,4 @@
-package com.axiom.hyketask.service.filter;
+package com.axiom.hyketask.repository;
 
 /**
  * This is general filtration definition, can be extended by any data filtration type, i.e.
