@@ -1,10 +1,7 @@
 package com.axiom.hyketask;
 
-import com.axiom.hyketask.config.EmbeddedMongoContainerConfig;
 import com.axiom.hyketask.repository.mongo.MobileHandsetEntity;
-import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
-import org.junit.Before;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.TestInstance;
@@ -35,9 +32,9 @@ public class MobileHandSetControllerIntegrationTest {
 
     @BeforeAll
     void init() throws IOException {
-       var objectMapper = new ObjectMapper();
-       var data = objectMapper.readValue(new File("src/test/resources/data.json"), MobileHandsetEntity[].class);
-       mongoTemplate.insertAll(Arrays.asList(data));
+        var objectMapper = new ObjectMapper();
+        var data = objectMapper.readValue(new File("src/test/resources/data.json"), MobileHandsetEntity[].class);
+        mongoTemplate.insertAll(Arrays.asList(data));
     }
 
     @Test

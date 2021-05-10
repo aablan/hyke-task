@@ -1,6 +1,5 @@
 package com.axiom.hyketask.repository.mongo;
 
-import com.axiom.hyketask.dto.MobileHandsetDTO;
 import com.axiom.hyketask.dto.ReleaseDTO;
 import lombok.AllArgsConstructor;
 import lombok.Data;
