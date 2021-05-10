@@ -65,8 +65,7 @@ public class MobileHandSetControllerIntegrationTest {
                 .get(url).prettyPeek()
         .then()
                 .statusCode(HttpStatus.OK.value())
-                .body("s" +
-                        "ize()", is(10));
+                .body("size()", is(10));
         //@formatter:on
 
     }
@@ -131,9 +130,9 @@ public class MobileHandSetControllerIntegrationTest {
         //@formatter:off
         given()
                 .port(port)
-                .when()
+        .when()
                 .get(url).prettyPeek()
-                .then()
+        .then()
                 .statusCode(HttpStatus.OK.value())
                 .body("size()", is(0));
         //@formatter:on
